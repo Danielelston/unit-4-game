@@ -1,0 +1,67 @@
+body {
+    background-image: url(../media/office.png);
+    font-family: 'VT323', monospace;
+    padding-bottom: 100px;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+.bodyBackground {
+    background-image: url(../media/FFbackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    display: flex;
+    max-width: 960px;
+    min-height: 400px;
+    height: auto;
+}
+
+.header {
+    background-image: url(../media/ffheader.jpg);
+    /* background: linear-gradient( 45deg, #698fa7, #4fa1db); */
+    height: auto;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    color: #e8c77a;
+    text-shadow: 2px 2px #122b3b;
+}
+
+.footer {
+    background: linear-gradient( 45deg, #22455e, #122b3b);
+    background-color: #183346;
+    color: #e8c77a;
+    text-align: center;
+    align-items: center;
+    display: block;
+    border-top: 10px solid #2f4352;
+    padding: 5px;
+    height: auto;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.container {
+    justify-content: center;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    max-width: 900px;
+}
+
+.content {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
