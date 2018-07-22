@@ -9,6 +9,20 @@ h1 {
     font-size: 1.7em;
 }
 
+h2 {
+    padding: 5px;
+    color: #808080;
+    text-shadow: 1px 1px #333333;
+    font-size: 1.5em;
+}
+
+p {
+    padding: 5px;
+    color: #808080;
+    text-shadow: 1px 1px #333333;
+    font-size: 1.2em;
+}
+
 .bodyBackground {
     background-image: url(../media/FFbackground.png);
     background-repeat: no-repeat;
@@ -55,21 +69,111 @@ h1 {
     width: 80%;
     margin: auto;
     display: flex;
-    max-width: 900px;
+    max-width: 960px;
+}
+
+.sidebar {
+    background-image: url(../media/escheresque_ste.png);
 }
 
 .content {
-    align-content: center;
-    justify-content: center;
+    /* align-content: center;
+    justify-content: center; */
     text-align: center;
     padding: 15px;
     width: 100%;
 }
 
 .characterSelect {
-    display: block;
+    display: flex;
     width: 100%;
     height: auto;
+    min-height: 500px;
     background: linear-gradient( 135deg, #0000aec9, #000024c9); 
 
 }
+
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inRow{
+    justify-content: flex-start;
+}
+
+.fighters {
+    display: 1;
+    padding: 5px;
+    justify-content: space-around;
+    /* border: 5px ridge #c6c6c6; */
+
+    /* width: 50px;
+    height: 50px; */
+}
+
+.charPic {
+    border: 5px ridge #c6c6c6;
+}
+
+.charPic:hover {
+    border: 5px ridge #ffffff;
+}
+
+.characterInfoBox {
+    flex: 1;
+    justify-content: flex-start;
+    border: 5px ridge #c6c6c6;
+    height: 100%;
+}
+
+.moogleCIB {
+    display: flex;
+    /* justify-content: center; */
+    /* justify-items: center; */
+}
+
+#moogleTalk {
+    flex: 2;
+    text-align: left;
+    justify-content: center;
+}
+
+.battleScreen{
+    background-image: url(../media/escheresque_ste.png);
+}
+#VSbutton {
+    flex:1;
+    /* margin: auto; */
+    /* width: 20%;
+    min-width: 50px; */
+}
+
+#playersFighterDiv {
+    flex: 1;
+}
+
+#enemyFighterDiv {
+    flex: 1;
+}
+/* .cloud {
+    background-image: url(../media/cloud.png);
+}
+
+.lightning {
+    background-image: url(../media/lightning.png);
+}
+
+.sephiroth {
+    background-image: url(../media/Sephiroth.png);
+}
+
+.noctis {
+    image: url(../media/noctis.png);
+
+} */

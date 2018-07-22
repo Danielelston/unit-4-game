@@ -1,58 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Final Fantasy RPG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="header">
+
+    <body>
+        <div class="header">
+            <div class="container">
+                <h1>Final Fantasy RPG</h1>
+            </div>
+        </div>
+
+        <br>
+
         <div class="container">
-            <h1>Final Fantasy RPG</h1>
-        </div>
-    </div>
-    
-    <br>
+            <div class="content gameDiv">
 
-    <div class="container">
-        <div class="content gameDiv">
+                <div class="characterSelect column">
+                    <div id="charSelh2">
+                        <!-- <h2 id="charSelh2"></h2> -->
+                    </div>
+                    <div class="row">
+                        <div class="fighters" id="fighters">
+                            <img src="assets/media/cloudPortrait.jpg" alt="Cloud portrait" class="charPic" id="cloudPic">
 
-            <div class="characterSelect">
-                <div class="fighter" id="char1"></div>
-                <div class="fighter" id="char1"></div>
-                <div class="fighter" id="char1"></div>
-                <div class="fighter" id="char1"></div> 
+                            <img src="assets/media/lightningPortrait.jpg" alt="Lightning portrait" class="charPic" id="lightningPic">
 
-                <div class="characterInfoBox" id="charInfo"></div>
-                
-                <!-- content for the player to select their character -->
+                            <img src="assets/media/sephirothPortrait.jpg" alt="Sephiroth portrait" class="charPic" id="sephirothPic">
+
+                            <img src="assets/media/noctisPortrait.jpg" alt="Noctis portrait" class="charPic" id="noctisPic">
+                        </div>
+                    </div>
+                    <div class="column sidebar"></div>
+
+
+                    <div class="characterInfoBox row" id="charInfo">
+                        <div class="moogleCIB row">
+                            <img src="assets/media/Moogle_KH.png" alt="moogle" width="60px" height="143px">
+                            <div id="moogleTalk">
+                                <p>Please pick a fighter...Kupo...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="battleScreen row">
+                    <div class="row fighters" id="vsScreen">
+
+                        <div id="enemyFighterDiv">
+                            <img src="" class="charPic" id="enemyFighter">
+
+                        </div>
+                        <div id="VSbutton">
+                            <img src="assets/media/VSbutton.png" alt="VS picture">
+
+                        </div>
+                        <div id="playersFighterDiv">
+                            <img src="" class="charPic" id="playersFighter">
+                        </div>
+                        <div id="attakBtn"><img src="assets/media/Attackbutton.png"</div>
+                    </div>
+                    <!-- content for the player to fight -->
+                    <div class="fightBtns">
+                        <div class="normAttk "></div>
+                        <!-- add new attacks later -->
+                        <!-- <div class="heavyAttk"></div>
+                    <div class="speacialAttk"></div> -->
+                        <!-- create btn for fighting -->
+                    </div>
+                    <div class="winScreen">
+                        <!-- content for win screen -->
+                    </div>
+
+                    <div class="deathScreen">
+                        <!-- content for death/lose screen  -->
+                    </div>
+
+                </div>
             </div>
-
-            <div class="battleScreen">
-                <!-- content for the player to fight -->
-                <div class="fightBtns">
-                    <div class="normAttk"></div>
-                    <div class="heavyAttk"></div>
-                    <div class="speacialAttk"></div>
-                    <!-- create btn for fighting -->
-                </div>
-                <div class="winScreen">
-                    <!-- content for win screen -->
-                </div>
-
-                <div class="deathScreen">
-                    <!-- content for death/lose screen  -->
-                </div>
-
-            </div>
         </div>
-    </div>
-</body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </body>
+
 </html>
