@@ -7,13 +7,22 @@
     <title>Final Fantasy RPG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 
     <body>
+
         <div class="header">
             <div class="container">
                 <h1>Final Fantasy RPG</h1>
@@ -23,68 +32,113 @@
         <br>
 
         <div class="container">
-            <div class="content gameDiv">
+            <div class="content">
+                <div class="gameDiv">
+                    <div class="characterSelect">
+                        <div class="content">
+                            <div class="row justify-content-md-center">
+                                <div id="charSelh2">
+                                    <!-- <h2 id="charSelh2"></h2> -->
+                                </div>
+                            </div>
 
-                <div class="characterSelect column">
-                    <div id="charSelh2">
-                        <!-- <h2 id="charSelh2"></h2> -->
-                    </div>
-                    <div class="row">
-                        <div class="fighters" id="fighters">
-                            <img src="assets/media/cloudPortrait.jpg" alt="Cloud portrait" class="charPic" id="cloudPic">
+                            <div class="content">
+                                <div class="row justify-content-md-center">
+                                    <div class="fighters" id="fighters">
+                                        <img src="assets/media/cloudPortrait.jpg" alt="Cloud portrait" class="charPic" id="cloudPic">
 
-                            <img src="assets/media/lightningPortrait.jpg" alt="Lightning portrait" class="charPic" id="lightningPic">
+                                        <img src="assets/media/lightningPortrait.jpg" alt="Lightning portrait" class="charPic" id="lightningPic">
 
-                            <img src="assets/media/sephirothPortrait.jpg" alt="Sephiroth portrait" class="charPic" id="sephirothPic">
+                                        <img src="assets/media/sephirothPortrait.jpg" alt="Sephiroth portrait" class="charPic" id="sephirothPic">
 
-                            <img src="assets/media/noctisPortrait.jpg" alt="Noctis portrait" class="charPic" id="noctisPic">
-                        </div>
-                    </div>
-                    <div class="column sidebar"></div>
-
-
-                    <div class="characterInfoBox row" id="charInfo">
-                        <div class="moogleCIB row">
-                            <img src="assets/media/Moogle_KH.png" alt="moogle" width="60px" height="143px">
-                            <div id="moogleTalk">
-                                <p>Please pick a fighter...Kupo...</p>
+                                        <img src="assets/media/noctisPortrait.jpg" alt="Noctis portrait" class="charPic" id="noctisPic">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="column sidebar"></div> -->
+                            <div class="content">
+                                <div class="row">
+                                    <div class="characterInfoBox" id="charInfo">
+                                        <div class="content">
+                                            <div class="row align-items-center">
+                                                <div class="col-sm-3">
+                                                    <img src="assets/media/Moogle_KH.png" alt="moogle" width="60px" height="143px">
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <div id="moogleTalk">
+                                                        <p>Please pick a fighter...</p>
+                                                        <p>...</p>
+                                                        <p>...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="battleScreen row">
-                    <div class="row fighters" id="vsScreen">
+                    <div class="battleScreen">
+                        <div class="content">
+                            <div class="fighters" id="vsScreen">
+                                <div class="row justify-content-md-center">
 
-                        <div id="enemyFighterDiv">
-                            <img src="" class="charPic" id="enemyFighter">
+                                    <div class="col-sm-4">
+                                        <div id="playersFighterDiv">
+                                            <img src="" class="charPic" id="playersFighter">
+                                            <div class="progress">
+                                                <div class="progress-bar" id="playersFighterHPbar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0"
+                                                    aria-valuemax="100">100%</div>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="col-sm-auto align-self-center">
+                                        <div id="VSbutton">
+                                            <img src="assets/media/VSbutton.png" class="img-fluid rounded mx-auto d-block" alt="VS picture">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div id="enemyFighterDiv">
+                                            <img src="" class="charPic" id="enemyFighter">
+                                            <div class="progress">
+                                                <div class="progress-bar" id="enemyFighterHPbar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0"
+                                                    aria-valuemax="100">100%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <br>
+
+                                <div class="row justify-content-md-center">
+                                    <div>
+                                        <img id="attackBtn" class="rounded" src="assets/media/Attackbutton.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="winScreenID">
+                                <div class="victorybar">
+                                    VICTORY
+                                    <div class="continueButton"></div>
+                                </div>
+                                <!-- content for win screen -->
+                            </div>
+
+                            <div id="deathScreenID">
+                                <div class="losebar">
+                                    You Died
+                                    <div class="continueButton"></div>
+
+                                </div>
+                                <!-- content for death/lose screen  -->
+                            </div>
                         </div>
-                        <div id="VSbutton">
-                            <img src="assets/media/VSbutton.png" alt="VS picture">
-
-                        </div>
-                        <div id="playersFighterDiv">
-                            <img src="" class="charPic" id="playersFighter">
-                        </div>
-                        <div id="attakBtn"><img src="assets/media/Attackbutton.png"</div>
                     </div>
-                    <!-- content for the player to fight -->
-                    <div class="fightBtns">
-                        <div class="normAttk "></div>
-                        <!-- add new attacks later -->
-                        <!-- <div class="heavyAttk"></div>
-                    <div class="speacialAttk"></div> -->
-                        <!-- create btn for fighting -->
-                    </div>
-                    <div class="winScreen">
-                        <!-- content for win screen -->
-                    </div>
-
-                    <div class="deathScreen">
-                        <!-- content for death/lose screen  -->
-                    </div>
-
                 </div>
             </div>
         </div>
